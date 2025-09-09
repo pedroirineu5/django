@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
+from home import views as home_views
+
 
 
 
@@ -29,5 +31,6 @@ def my_view(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home', my_view)
+    path('home', my_view),
+    path('homeApp/', home_views.home)
 ]
