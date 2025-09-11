@@ -5,3 +5,7 @@ from django.shortcuts import render
 
 def home(request):
     return HttpResponse("UMA MENSAGEM PARA ALGUÉM MUITO FODA, DIRETAMENTO DO VIEWS DO APP HOME!")
+
+
+def home2(request):
+    return HttpResponse("lorem ipsum")     
