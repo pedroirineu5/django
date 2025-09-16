@@ -8,3 +8,4 @@ urlpatterns = [
     path('', views.home),
     path('exemplo1/', views.home2)
 ]
+
