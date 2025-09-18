@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -7,4 +8,4 @@ def home(request):
 
 
 def home2(request):
-    return HttpResponse("lorem ipsum")     
+    return render(request, 'global/base.html')   
