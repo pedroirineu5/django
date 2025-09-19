@@ -8,4 +8,4 @@ def home(request):
 
 
 def home2(request):
-    return render(request, 'global/base.html')   
+    return render(request, 'home/exemplo1.html') 
