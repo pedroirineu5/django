@@ -4,8 +4,19 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request,'home/index.html')
+
+    context = {
+        'text' : 'Pagina Inicial'
+    }
+
+    return render(request,'home/index.html', context)
 
 
 def home2(request):
-    return render(request, 'home/exemplo1.html') 
+
+    context = {
+        'text' : 'Pagina de Exemplo 1',
+        'title' : 'Agora estou foda'
+    }
+
+    return render(request, 'home/exemplo1.html', context) 
