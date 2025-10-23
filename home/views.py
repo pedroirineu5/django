@@ -19,4 +19,4 @@ def home2(request):
         'title' : 'Agora estou foda'
     }
 
-    return render(request, 'home/exemplo1.html', context) 
+    return render(request, 'home/exemplo1.html', context)
