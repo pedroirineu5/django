@@ -5,7 +5,6 @@ from . import views
 
 #homeApp/
 urlpatterns = [
-    path('', views.home),
-    path('exemplo1/', views.home2)
+    path('', views.home, name='home'),
+    path('exemplo1/', views.home2, name='exemplo1')
 ]
-
