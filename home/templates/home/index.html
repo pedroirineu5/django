@@ -4,8 +4,6 @@
 
 {% block header%} Wel come quem? {% endblock %}
 
-{% block content %} 
-
-    {{ text }}
-
-{% endblock content %}
+{% block post %} 
+    {% include 'global/partials/postblock.html'%}
+{% endblock post %}

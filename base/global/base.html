@@ -5,13 +5,9 @@
         <h1>{% block header %}Welcome to Template{% endblock %}</h1>
     </header>
 
-    <main>
-        {% block content %}
-        <div class="card">
-            <h2>Default Content</h2>
-            <p>This is the base template. Override the <code>content</code> block in your Django templates.</p>
-        </div>
-        {% endblock %}
+    <main class='content'>
+        {% block post %}{% endblock post %}
+        {% block exemplo1 %}{% endblock exemplo1 %}
     </main>
 
     <footer>
