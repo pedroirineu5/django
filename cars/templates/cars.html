@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros de macho</title>
+</head>
+{% block content %}
+<body>
+    {% for car in cars %}
+        <h3>{{ car.model}} -- {{car.factory_year}} - {{car.brand}}</h3>
+    {% endfor %}
+</body>
+{% endblock content %}
+
+
+</html>
