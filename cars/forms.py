@@ -11,4 +11,4 @@ class CarForm(forms.Form):
     model_year = forms.IntegerField()
     plate = forms.CharField(max_length=10)
     value = forms.IntegerField()
-    photo = forms.IntegerField()
+    photo = forms.ImageField()

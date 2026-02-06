@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{% endblock %}</title>
+  <title>{% block title %}Carros{% endblock %}</title>
   <style>
     body {
         font-family: 'Open Sans', sans-serif;
@@ -72,6 +72,7 @@
   <header>
     <nav>
       <ul>
+        {% comment %}  NESSA PARTE ESSE FEZ UM BOTÃO DE HOME PARA VOLTAR PARA A PAGINA INICIAL, USANDO O MESMO TEMPLATE, ASSIM, MOSTRANDO QUE A PÁGINA NAO MUDA. {% endcomment %}
         <li><a href="{% url 'cars_list' %}">Carros</a></li>
       </ul>
     </nav>
@@ -83,7 +84,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2023 PycodeBR Multimarcas</p>
+    <p>&copy; Carros Rápidos</p>
   </footer>
 </body>
 </html>
