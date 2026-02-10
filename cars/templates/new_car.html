@@ -7,7 +7,7 @@
 <form method="post">
     {% csrf_token %}
 
-     {{ new_car_form }}
+     {{ new_car_form.as_p }}
 </form>
 
 {% endblock content%}
