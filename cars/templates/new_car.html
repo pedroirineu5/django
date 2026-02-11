@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
+{% block title %} CARRO PROCURADOS {%endblock%}
+{% comment %}  Vejo lógica e ao mesmo tempo n vejo logica em colocar o itulo dentro do block, mas faz mais sentido por conta que o titulo ficar por fora do body/block de conteudo do django {% endcomment %}
 {% block content %}
 
-{% block title %} CARRO PROCURADOS {%endblock%}
-
-<form method="post">
+{% comment %} Esse enctype é para poder enviar midia pelo POST. {% endcomment %}
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
      {{ new_car_form.as_p }}
+     {{new_car_form.errors}}
     <input type="submit" value="cadastrar" class="btn btn-primary">
 </form>
 
