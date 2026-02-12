@@ -3,6 +3,8 @@
 {% block content %}
 
 <form action="submit">
+    
+    {% csrf_token %}
 
     {{ user_form.as_p}}
 
