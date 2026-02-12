@@ -27,8 +27,22 @@ from cars.models import Brand, Car
 #         car.save()
 #         return car
 
+
+#refatoração do form todinho acima, até mesmo os métodos e até a gambiarra de choice fields para brand. Pois ele ja entende é uma seleção por está conectado ao modelo de Carro.
 class CarForm(forms.ModelForm):
 
     class Meta:
         model = Car
         fields = '__all__'
+
+    def clean_value(self):
+        value = self.cleaned_data.get('value')
+        if value < 20000:
+            self.add_error('value', 'Carros não podem custar menos que R$20,000')
+        return value
+
+    def clean_factory_year(self):
+        factory_year = self.cleaned_data.get('factory_year')
+        if factory_year < 1980:
+            self.add_error('factory_year', 'Não aceitamos carros velhos!')
+        return factory_year
