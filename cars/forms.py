@@ -35,6 +35,8 @@ class CarForm(forms.ModelForm):
         model = Car
         fields = '__all__'
 
+
+#   validadores em django, usando o préfico "clean_" achei broken
     def clean_value(self):
         value = self.cleaned_data.get('value')
         if value < 20000:
