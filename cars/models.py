@@ -7,7 +7,7 @@ class Brand(models.Model):
 
     def __str__(self):
         return self.name
-
+ 
 
 # Car vai ser o nome da tabela no banco de dados
 class Car(models.Model):
