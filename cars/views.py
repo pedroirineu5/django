@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from cars.models import Car
 from cars.forms import CarForm
 from django.views import View
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
 
 
 class ListCarsView(ListView):
@@ -32,3 +32,7 @@ class CarDetailView(DetailView):
 
     model = Car
     template_name = 'car_detail.html'
+
+class CarUpdateView(UpdateView):
+    model = Car
+    
